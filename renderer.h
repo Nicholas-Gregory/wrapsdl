@@ -25,7 +25,7 @@ public:
 
 	void copy_ex(SDL_Texture* texture, const SDL_Rect* srcrect, const SDL_Rect* dstrect, const double angle, const SDL_Point* center, const SDL_RendererFlip flip);
 
-	void draw_line(int x1, int x2, int y1, int y2);
+	void draw_line(int x1, int y1, int x2, int y2);
 
 	void draw_lines(const SDL_Point* points, int count);
 

@@ -82,9 +82,9 @@ void Renderer::copy_ex(SDL_Texture* texture, const SDL_Rect* srcrect, const SDL_
 	}
 }
 
-void Renderer::draw_line(int x1, int x2, int y1, int y2)
+void Renderer::draw_line(int x1, int y1, int x2, int y2)
 {
-	int err = SDL_RenderDrawLine(renderer, x1, x2, y1, y2);
+	int err = SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
 	if (err < 0)
 	{
 		printf("There was a problem drawing the line. SDL error:%s\n", SDL_GetError());
