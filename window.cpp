@@ -37,8 +37,8 @@ void* Window::get_data(const char* name)
 
 int Window::get_display_index()
 {
-	int ret = SDL_GetWindowDisplayIndex(window);
-	if (ret < 0)
+	int err = SDL_GetWindowDisplayIndex(window);
+	if (err < 0)
 	{
 		printf("There was a problem finding the display index of window %d. SDL error: %s\n", SDL_GetWindowID(window), SDL_GetError());
 	}

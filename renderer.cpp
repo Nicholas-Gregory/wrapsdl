@@ -6,7 +6,8 @@
 Renderer::Renderer(Window& window, int index, Uint32 flags)
 {
 	SDL_Window* sdlwindow = window.get_sdl_window();
-	if (SDL_CreateRenderer(sdlwindow, index, flags) == NULL)
+	renderer = SDL_CreateRenderer(sdlwindow, index, flags);
+	if (renderer == NULL)
 	{
 		printf("There was a problem creating the renderer in window %d. SDL error: %s\n", window.get_id(), SDL_GetError());
 	}
